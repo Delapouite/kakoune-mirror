@@ -1,30 +1,17 @@
-define-command mirror -params ..1 %{
-  info -title %sh{[ $1 = lock ] && echo "'mirror (lock)'" || echo 'mirror' } \
-%{grow or shrink selections in both directions:
-h j k l J K b e w
-}
-  on-key %{ %sh{
-    case "$kak_key" in
-      h) echo "exec 'H<a-;>L<a-;>'" ;;
-      j) echo "exec 'J<a-;>K<a-;>'" ;;
-      k) echo "exec 'K<a-;>J<a-;>'" ;;
-      l) echo "exec 'L<a-;>H<a-;>'" ;;
-      J) echo "exec 'J<a-;>K<a-;><a-x>'" ;;
-      K) echo "exec 'K<a-;>J<a-;><a-x>'" ;;
-      b) echo "exec 'B<a-;>W<a-;>'" ;;
-      e) echo "exec 'E<a-;>B<a-;>'" ;;
-      w) echo "exec 'W<a-;>B<a-;>'" ;;
-      '<a-;>') echo "exec '<a-;>'" ;;
-      # info hides the previous one
-      *) echo info; esc=true ;;
-    esac
-    # repeat?
-    if [ "$1" = lock ] && [ "$esc" != true ]; then
-      echo ';mirror lock;'
-    fi
-  }}
-}
+declare-user-mode mirror
+map global mirror h 'H<a-;>L<a-;>'
+map global mirror j 'J<a-;>K<a-;>'
+map global mirror k 'K<a-;>J<a-;>'
+map global mirror l 'L<a-;>H<a-;>'
+map global mirror J 'J<a-;>K<a-;><a-x>'
+map global mirror K 'K<a-;>J<a-;><a-x>'
+map global mirror b 'B<a-;>W<a-;>'
+map global mirror e 'E<a-;>B<a-;>'
+map global mirror w 'W<a-;>B<a-;>'
+map global mirror p '}p<a-;>{p<a-;>'
+map global mirror s '}s<a-;>{s<a-;>'
+map global mirror '<a-;>' '<a-;>'
 
-# Suggested mappings
+# Suggested mapping
 
-#map global normal <a-M> ':mirror lock<ret>'
+#map global normal <a-M> ':enter-user-mode -lock mirror<ret>' -docstring 'mirror lock'
