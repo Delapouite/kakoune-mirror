@@ -30,6 +30,7 @@ map global mirror d 'Z<a-S><a-d>zH'                 -docstring 'delete'
 
 # fallthrough
 map global mirror '<a-;>' '<a-;>'       -docstring 'swap anchor and cursor'
+map global mirror '<a-S>' '<a-S>'       -docstring 'select sels boundaries'
 
 # Suggested mapping
 
