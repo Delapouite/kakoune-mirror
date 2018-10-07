@@ -13,6 +13,7 @@ map global mirror w 'W<a-;>B<a-;>'      -docstring 'word begin'
 map global mirror e 'E<a-;>B<a-;>'      -docstring 'word end'
 map global mirror p '}p<a-;>{p<a-;>'    -docstring paragraph
 map global mirror s '}s<a-;>{s<a-;>'    -docstring sentence
+map global mirror m 'M<a-;><a-M><a-;>'  -docstring matching
 
 # insert/delete
 map global mirror ( 'a)<esc>i(<esc>H<a-;>'          -docstring '(surround)'
@@ -34,5 +35,4 @@ map global mirror '<a-S>' '<a-S>'       -docstring 'select sels boundaries'
 
 # Suggested mapping
 
-#map global normal <a-m> ':enter-user-mode -lock mirror<ret>' -docstring 'mirror lock'
-#map global normal <a-M> <a-m> -docstring 'merge consecutive selections'
+#map global normal "'" ':enter-user-mode -lock mirror<ret>' -docstring 'mirror lock'

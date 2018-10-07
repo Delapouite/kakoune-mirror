@@ -12,10 +12,10 @@ This plugin provides a `mirror` user-mode.
 
 ```
 # Suggested mapping
-map global normal <a-m> ':enter-user-mode -lock mirror<ret>' -docstring 'mirror lock'
+map global normal "'" ':enter-user-mode -lock mirror<ret>' -docstring 'mirror lock'
 ```
 
-For example with the above mapping, press `<a-m>` to enter the mirror mode (`<esc>` to leave).
+For example with the above mapping, press `'` to enter the mirror mode (`<esc>` to leave).
 
 ### Grow / shrink
 
@@ -23,7 +23,7 @@ If you type `l` it grows the selections one char to their right, but also one ch
 To shrink it one char, use `h`.
 When the cursor is before the anchor, it does the opposite.
 
-**Example**: the current selection is the middle `l`. Typing `<a-m>llhh` would produce these visual steps:
+**Example**: the current selection is the middle `l`. Typing `'llhh` would produce these visual steps:
 ```
 he[l]lo
 h[ell]o
@@ -45,7 +45,7 @@ Pairwise characters like braces, brackets or quotes can be added, replaced or re
 
 **Example**: starting from the world `hello` selected.
 
-First, let's surround it with double quotes and parentheses `<a-m>"(`
+First, let's surround it with double quotes and parentheses `'"(`
 
 ```
 [hello]
