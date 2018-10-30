@@ -6,14 +6,18 @@
 
 Add `mirror.kak` to your autoload dir: `~/.config/kak/autoload/`.
 
+Or via [plug.kak](https://github.com/andreyorst/plug.kak):
+
+```
+plug 'delapouite/kakoune-mirror' %{
+  # Suggested mapping
+  map global normal "'" ': enter-user-mode -lock mirror<ret>'
+}
+```
+
 ## Usage
 
 This plugin provides a `mirror` user-mode.
-
-```
-# Suggested mapping
-map global normal "'" ':enter-user-mode -lock mirror<ret>' -docstring 'mirror lock'
-```
 
 For example with the above mapping, press `'` to enter the mirror mode (`<esc>` to leave).
 

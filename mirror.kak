@@ -35,4 +35,4 @@ map global mirror '<a-S>' '<a-S>'       -docstring 'select sels boundaries'
 
 # Suggested mapping
 
-#map global normal "'" ':enter-user-mode -lock mirror<ret>' -docstring 'mirror lock'
+#map global normal "'" ': enter-user-mode -lock mirror<ret>' -docstring 'mirror lock'
