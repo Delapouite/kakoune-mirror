@@ -71,6 +71,7 @@ Oops, you meant to surround the double quotes with spaced-braces! Press `d` to r
 - [kakoune-surround](https://github.com/h-youhei/kakoune-surround)
 - [move-line.kak](https://github.com/alexherbo2/move-line.kak)
 - [auto-pairs.kak](https://github.com/alexherbo2/auto-pairs.kak)
+- [surround.kak](https://github.com/alexherbo2/surround.kak)
 
 ## Licence
 
