@@ -16,20 +16,21 @@ map global mirror s '}s<a-;>{s<a-;>'    -docstring sentence
 map global mirror m 'M<a-;><a-M><a-;>'  -docstring matching
 
 # insert/delete
-map global mirror ( 'a)<esc>i(<esc>H<a-;>'          -docstring '(surround)'
-map global mirror { 'a}<esc>i{<esc>H<a-;>'          -docstring '{surround}'
-map global mirror [ 'a]<esc>i[<esc>H<a-;>'          -docstring '[surround]'
-map global mirror < 'a<gt><esc>i<lt><esc>H<a-;>'    -docstring '<surround>'
-map global mirror « 'a»<esc>i«<esc>H<a-;>'          -docstring '«surround»'
-map global mirror ) 'a )<esc>i( <esc>2H<a-;>'       -docstring '( surround )'
-map global mirror } 'a }<esc>i{ <esc>2H<a-;>'       -docstring '{ surround }'
-map global mirror ] 'a ]<esc>i[ <esc>2H<a-;>'       -docstring '[ surround ]'
-map global mirror > 'a <gt><esc>i<lt> <esc>2H<a-;>' -docstring '< surround >'
-map global mirror » 'a »<esc>i« <esc>2H<a-;>'       -docstring '« surround »'
-map global mirror '"' 'a"<esc>i"<esc>H<a-;>'        -docstring '"surround"'
-map global mirror "'" "a'<esc>i'<esc>H<a-;>"        -docstring "'surround'"
-map global mirror '`' 'a`<esc>i`<esc>H<a-;>'        -docstring '`surround`'
-map global mirror d 'Z<a-S><a-d>z<a-:>H'            -docstring 'delete'
+map global mirror ( '\a)<esc>\i(<esc>H<a-;>'          -docstring '(surround)'
+map global mirror { '\a}<esc>\i{<esc>H<a-;>'          -docstring '{surround}'
+map global mirror [ '\a]<esc>\i[<esc>H<a-;>'          -docstring '[surround]'
+map global mirror < '\a<gt><esc>\i<lt><esc>H<a-;>'    -docstring '<surround>'
+map global mirror « '\a»<esc>\i«<esc>H<a-;>'          -docstring '«surround»'
+map global mirror ) '\a )<esc>\i( <esc>2H<a-;>'       -docstring '( surround )'
+map global mirror } '\a }<esc>\i{ <esc>2H<a-;>'       -docstring '{ surround }'
+map global mirror ] '\a ]<esc>\i[ <esc>2H<a-;>'       -docstring '[ surround ]'
+map global mirror > '\a <gt><esc>\i<lt> <esc>2H<a-;>' -docstring '< surround >'
+map global mirror » '\a »<esc>\i« <esc>2H<a-;>'       -docstring '« surround »'
+map global mirror '"' '\a"<esc>\i"<esc>H<a-;>'        -docstring '"surround"'
+map global mirror "'" "\a'<esc>\i'<esc>H<a-;>"        -docstring "'surround'"
+map global mirror '`' '\a`<esc>\i`<esc>H<a-;>'        -docstring '`surround`'
+map global mirror d ': mirror-delete<ret>'            -docstring 'delete'
+define-command -hidden mirror-delete %{ execute-keys Z<a-S><a-d>z<a-:>H }
 
 # fallthrough
 map global mirror '<a-;>' '<a-;>'       -docstring 'swap anchor and cursor'
